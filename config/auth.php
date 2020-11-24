@@ -44,7 +44,7 @@ return [
         // we change default API Guards to use JWT provided guard
         'api' => [
             'driver' => 'jwt',
-            'provider' => 'users',
+            'provider' => 'users_jwt',
         ],
     ],
 
@@ -70,6 +70,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+        'users_jwt' => [
+            'driver' => 'jwt_redis_user_provider',
+            'model' => App\Models\User::class
+        ]
 
         // 'users' => [
         //     'driver' => 'database',
