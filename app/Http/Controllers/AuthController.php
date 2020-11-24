@@ -88,9 +88,9 @@ class AuthController extends Controller
         ]);
 
         // need to generate token and return it to user
-
-
-        return $user;
+        $token = auth()->login($user);
+        
+        return $this->tokenResponse($token);
     }
 
     /**
