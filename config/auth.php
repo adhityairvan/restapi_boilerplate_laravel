@@ -43,8 +43,8 @@ return [
         ],
         // we change default API Guards to use JWT provided guard
         'api' => [
-            'driver' => 'jwt_redis_guard',
-            'provider' => 'users_jwt',
+            'driver' => 'jwt',
+            'provider' => 'users',
         ],
     ],
 
